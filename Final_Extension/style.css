@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-weight: normal
+}
+*:focus {
+    outline: none
+}
+
+#main_timer {
+    background-image: url(icons/mainbackground.png);
+}
+body {
+    background-color: #9191e9;
+    font-size: 14px;
+    line-height: 1.4em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none
+}
+#main_content {
+    position: relative;
+    width: 228px;
+    height: 320px;
+    overflow: hidden;
+}
+#main_content #options_menu {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    fill: #bdbdbd;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2
+}
+
+#main_content #main_timer,
+#main_content #options {
+    position: relative;
+    width: 228px;
+    height: 320px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+#options {
+    background-color: #9191e9;
+}
+#instructions {
+    position: relative;
+    width: 228px;
+    height: 320px;
+    box-sizing: border-box;
+    /*padding: 20px 0;*/
+}
+#main_content #main_timer {
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, .5, 1)
+}
+#main_content #main_timer.display_options {
+    margin-top: -320px
+}
+#main_content #main_timer.instructions {
+    margin-top: -640px
+}
+#main_content #main_timer #circle_progress {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 20px auto
+}
+#main_content #main_timer #circle_progress #countdown {
+    position: absolute;
+    width: 144px;
+    height: 144px;
+    top: 0;
+    margin: 8px;
+    border-radius: 50%;
+    background: #fff
+}
+
+#countdown {
+    margin-top: 90px;
+    text-align: center;
+}
+
+#inside_text {
+    text-align: center;
+}
+
+ #main_counter {
+    color: #7777c1;
+    font-size: 36px;
+    text-align: center;
+    font-family: "Avenir";
+    font-weight: bold;
+    font-style: normal;
+ }
+.time {
+    color: #7777c1;
+    font-size: 26px;
+    text-align: center;
+    font-family: "Avenir";
+    font-weight: bold;
+    font-style: normal;
+}
+#logo_section {
+    position: absolute;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 75px;
+    z-index: 5;
+}
+#start_auto_section {
+    font-size: 18px;
+    /*line-height: 25px;*/
+    color: #7777c1;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 46px;
+    display: inline-block;
+    font-family: "Avenir";
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+}
+#main_content #options #time_options {
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #7777c1;
+    line-height: 25px;
+}
+#main_content #options #more_info,
+#main_content #options #how_to {
+    font-size: 12px;
+    color: #b9e28c;
+    font-family: "Avenir";
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+}
+#main_content #options #how_to {
+    cursor: pointer;
+    background-color: #9191e9;
+}
+#main_content #options #how_to:hover {
+    color: #757575
+}
+#main_content #instructions h2 {
+    margin-top: 60px;
+    color: #7777c1;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    font-family: "Avenir";
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+#main_content #instructions ul>li {
+    font-family: "Avenir";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    color: #fff;
+    padding-top: 5px;
+    margin-left: 35px;
+}
+#main_content .btn {
+    width: 150px;
+    position: absolute;
+    /*margin-top: 5px;*/
+    margin-left: 25px;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    vertical-align: baseline;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+    bottom: 40px;
+    box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.07);
+}
+#main_content .btn.start_button {
+    background-color: #b9e28c;
+}
+#main_content .btn.start_button:before {
+    content: "start timer!"
+}
+#main_content .btn.start_button:hover {
+    background: #79ba7c
+}
+#main_content .btn.stop_button {
+    background: #f0524f
+}
+#main_content .btn.stop_button:before {
+    content: "Stop timer!"
+}
+#main_content .btn.stop_button:hover {
+    background: #e34d4b
+}
+#main_content .btn.done_button {
+    background: #b9e28c;
+}
+#main_content .btn.done_button:hover {
+    background: #757575
+}
+input[type=number] {
+    border: none;
+    border-bottom: 4px solid #fff;
+    /*border-bottom-left-radius: 2em;*/
+    /*border-bottom-right-radius: 2em;*/
+    width: 70px;
+    height: 40px;
+    padding: 5px;
+    background-color: #9191e9;
+    font-family:"Avenir";
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+}
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    border-radius: 1px solid #7777c1;
+    display: inline-block;
+}
+

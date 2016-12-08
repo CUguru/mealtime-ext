@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"background": {
+		"persistent": true,
+		"scripts": [ "background.js" ]
+	},
+	"browser_action": {
+		"default_popup": "index.html",
+		"default_title": "Meal Time",
+		"default_icon": "icons/mainbackground.png"
+	},
+
+	"description": "Forget to eat at times? Meal time has got you covered!",
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"name": "Meal Time!",
+	"permissions": [ "notifications", "storage" ],
+	"version": "1.0",
+	"minimum_chrome_version": "29"
+}

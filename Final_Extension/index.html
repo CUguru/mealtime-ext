@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Meal Time</title>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<div id="logo_section"><img src="icons/mealtimelogo.svg"></div>
+		<div id="main_content">
+			<button id="options_menu">
+				<img src="icons/settingsbutton.svg">
+			</button>
+			<div id="main_timer">
+				<div id="countdown">
+						<div class="inside_text">
+							<span id="main_counter">13</span>
+							<br>
+							<span id="units" class="time">minutes</span>
+						</div>
+					</div>
+				
+				<div id="circle-progress">
+					<g>
+					<svg width="160px" height="160px" xmlns="http://www.w3.org/2000/svg">
+ 						<path d="m4,80c0,-41.98895 34.01105,-76 76,-76c41.98895,0 76,34.01105 76,76c0,41.98895 -34.01105,76 -76,76c-41.98895,0 -76,-34.01105 -76,-76z" transform="rotate(90 80,80) " fill="transparent" stroke="transparent" stroke-width="8" stroke-miterlimit="0"/>
+  						<path id="circleProgress" d="m4,80c0,-41.98895 34.01105,-76 76,-76c41.98895,0 76,34.01105 76,76c0,41.98895 -34.01105,76 -76,76c-41.98895,0 -76,-34.01105 -76,-76z" transform="rotate(90 80,80) " fill="transparent" stroke="transparent" stroke-width="8" stroke-miterlimit="0"/>
+					</svg>
+					</g>
+					
+				</div>
+				<button class="btn start_button" id="toggle_button">
+				</button>
+			</div>
+
+			<div id="options">
+				
+				<div id="time_options">
+					Remind me to<br>eat every<br>
+					<input type="number" id="minute_value" value="60" required>
+					<br>
+					minutes
+				</div>
+
+				<div id="start_auto_section">
+					Auto-Start<input type="checkbox" id="autostart">
+				</div>
+
+				<div id="more_info">
+					<button id="how_to">How to Use</button>
+				</div>
+
+				<button class="btn done_button" id="optionsSave">
+					Return
+				</button>
+			</div>
+
+			<div id="instructions">
+				<h2>How to Use</h2>
+				<ul>
+					<li>Put in your preferred time interval to be reminded</li>
+					<li>Click "Start Timer" and look out for the notification once the time is up</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
